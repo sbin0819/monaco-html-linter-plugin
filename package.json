@@ -21,7 +21,7 @@
     "license": "MIT",
     "dependencies": {
         "@types/htmlhint": "^1.1.2",
-        "htmlhint-invalid-attribute-rule": "^0.0.5",
+        "htmlhint-invalid-attribute-rule": "^0.0.6",
         "monaco-editor": "^0.33.0"
     },
     "devDependencies": {
