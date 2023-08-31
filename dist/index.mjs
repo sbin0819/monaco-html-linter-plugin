@@ -1,8 +1,8 @@
-var He = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {}, _e = { exports: {} };
-(function(M, y) {
+var Ze = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : typeof global < "u" ? global : typeof self < "u" ? self : {}, _e = { exports: {} };
+(function(P, y) {
   (function(m, O) {
-    M.exports = O();
-  })(He, function() {
+    P.exports = O();
+  })(Ze, function() {
     function m(a) {
       return a && a.__esModule && Object.prototype.hasOwnProperty.call(a, "default") ? a.default : a;
     }
@@ -20,9 +20,9 @@ var He = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : t
         });
       }), s;
     }
-    var q = {}, C = {};
-    Object.defineProperty(C, "__esModule", { value: !0 });
-    class N {
+    var E = {}, M = {};
+    Object.defineProperty(M, "__esModule", { value: !0 });
+    class k {
       constructor() {
         this._listeners = {}, this._mapCdataTags = this.makeMap("script,style"), this._arrBlocks = [], this.lastEvent = null;
       }
@@ -35,7 +35,7 @@ var He = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : t
       parse(s) {
         const r = this._mapCdataTags, t = /<(?:\/([^\s>]+)\s*|!--([\s\S]*?)--|!([^>]*?)|([\w\-:]+)((?:\s+[^\s"'>\/=\x00-\x0F\x7F\x80-\x9F]+(?:\s*=\s*(?:"[^"]*"|'[^']*'|[^\s"'>]*))?)*?)\s*(\/?))>/g, e = /\s*([^\s"'>\/=\x00-\x0F\x7F\x80-\x9F]+)(?:\s*=\s*(?:(")([^"]*)"|(')([^']*)'|([^\s"'>]*)))?/g, n = /\r?\n/g;
         let i, l, o = 0, c, d, u = null, g, f = [], _ = 0, p, v = 0, b = 1;
-        const P = this._arrBlocks;
+        const $ = this._arrBlocks;
         this.fire("start", {
           pos: 0,
           line: 1,
@@ -47,8 +47,8 @@ var He = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : t
           };
           return r[c] && L.value.indexOf("text/ng-template") === -1;
         }, w = (L, h, j, T) => {
-          const $ = j - v + 1;
-          for (T === void 0 && (T = {}), T.raw = h, T.pos = j, T.line = b, T.col = $, P.push(T), this.fire(L, T); n.exec(h); )
+          const C = j - v + 1;
+          for (T === void 0 && (T = {}), T.raw = h, T.pos = j, T.line = b, T.col = C, $.push(T), this.fire(L, T); n.exec(h); )
             b++, v = j + n.lastIndex;
         };
         for (; i = t.exec(s); ) {
@@ -68,11 +68,11 @@ var He = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : t
             const L = i[5];
             let h, j = 0;
             for (; h = e.exec(L); ) {
-              const T = h[1], $ = h[2] ? h[2] : h[4] ? h[4] : "", pe = h[3] ? h[3] : h[5] ? h[5] : h[6] ? h[6] : "";
+              const T = h[1], C = h[2] ? h[2] : h[4] ? h[4] : "", pe = h[3] ? h[3] : h[5] ? h[5] : h[6] ? h[6] : "";
               d.push({
                 name: T,
                 value: pe,
-                quote: $,
+                quote: C,
                 index: h.index,
                 raw: h[0]
               }), j += h[0].length;
@@ -136,9 +136,9 @@ var He = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : t
         return r;
       }
     }
-    C.default = N;
-    var E = {};
-    Object.defineProperty(E, "__esModule", { value: !0 });
+    M.default = k;
+    var q = {};
+    Object.defineProperty(q, "__esModule", { value: !0 });
     class ve {
       constructor(s, r) {
         this.html = s, this.lines = s.split(/\r?\n/);
@@ -174,7 +174,7 @@ var He = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : t
         });
       }
     }
-    E.default = ve;
+    q.default = ve;
     var be = {}, x = {};
     Object.defineProperty(x, "__esModule", { value: !0 }), x.default = {
       id: "alt-require",
@@ -466,13 +466,13 @@ var He = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : t
     };
     var Y = {};
     Object.defineProperty(Y, "__esModule", { value: !0 });
-    const Oe = "(?<grandfathered>(en-GB-oed|i-ami|i-bnn|i-default|i-enochian|i-hak|i-klingon|i-lux|i-mingo|i-navajo|i-pwn|i-tao|i-tay|i-tsu|sgn-BE-FR|sgn-BE-NL|sgn-CH-DE)|(art-lojban|cel-gaulish|no-bok|no-nyn|zh-guoyu|zh-hakka|zh-min|zh-min-nan|zh-xiang))", Ae = "(?<privateUse>x(-[A-Za-z0-9]{1,8})+)", je = "(?<privateUse2>x(-[A-Za-z0-9]{1,8})+)", Pe = `((?<language>([A-Za-z]{2,3}(-(?<extlang>[A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-(?<script>[A-Za-z]{4}))?(-(?<region>[A-Za-z]{2}|[0-9]{3}))?(-(?<variant>[A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-(?<extension>[0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-${Ae})?)`, Me = `(${Oe}|${Pe}|${je})`;
+    const Oe = "(?<grandfathered>(en-GB-oed|i-ami|i-bnn|i-default|i-enochian|i-hak|i-klingon|i-lux|i-mingo|i-navajo|i-pwn|i-tao|i-tay|i-tsu|sgn-BE-FR|sgn-BE-NL|sgn-CH-DE)|(art-lojban|cel-gaulish|no-bok|no-nyn|zh-guoyu|zh-hakka|zh-min|zh-min-nan|zh-xiang))", Ae = "(?<privateUse>x(-[A-Za-z0-9]{1,8})+)", je = "(?<privateUse2>x(-[A-Za-z0-9]{1,8})+)", $e = `((?<language>([A-Za-z]{2,3}(-(?<extlang>[A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-(?<script>[A-Za-z]{4}))?(-(?<region>[A-Za-z]{2}|[0-9]{3}))?(-(?<variant>[A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-(?<extension>[0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*(-${Ae})?)`, Pe = `(${Oe}|${$e}|${je})`;
     Y.default = {
       id: "html-lang-require",
       description: "The lang attribute of an <html> element must be present and should be valid.",
       init(a, s) {
         a.addListener("tagstart", (r) => {
-          const t = r.tagName.toLowerCase(), e = a.getMapAttrs(r.attrs), n = r.col + t.length + 1, i = new RegExp(Me, "g");
+          const t = r.tagName.toLowerCase(), e = a.getMapAttrs(r.attrs), n = r.col + t.length + 1, i = new RegExp(Pe, "g");
           t === "html" && ("lang" in e ? e.lang ? i.test(e.lang) || s.warn("The lang attribute value of <html> element must be a valid BCP47.", r.line, n, this, r.raw) : s.warn("The lang attribute of <html> element must have a value.", r.line, n, this, r.raw) : s.warn("An lang attribute must be present on <html> elements.", r.line, n, this, r.raw));
         });
       }
@@ -781,7 +781,7 @@ var He = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : t
     };
     var fe = {};
     Object.defineProperty(fe, "__esModule", { value: !0 });
-    let k = {
+    let N = {
       a: {
         selfclosing: !1,
         attrsRequired: ["href", "title"],
@@ -813,10 +813,10 @@ var He = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : t
       id: "tags-check",
       description: "Checks html tags.",
       init(a, s, r) {
-        k = Object.assign(Object.assign({}, k), r), a.addListener("tagstart", (t) => {
+        N = Object.assign(Object.assign({}, N), r), a.addListener("tagstart", (t) => {
           const e = t.attrs, n = t.col + t.tagName.length + 1, i = t.tagName.toLowerCase();
-          if (k[i]) {
-            const l = k[i];
+          if (N[i]) {
+            const l = N[i];
             l.selfclosing === !0 && !t.close ? s.warn(`The <${i}> tag must be selfclosing.`, t.line, t.col, this, t.raw) : l.selfclosing === !1 && t.close && s.warn(`The <${i}> tag must not be selfclosing.`, t.line, t.col, this, t.raw), Array.isArray(l.attrsRequired) && l.attrsRequired.forEach((c) => {
               if (Array.isArray(c)) {
                 const d = c.map((f) => f), u = d.shift(), g = d;
@@ -855,7 +855,7 @@ var He = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : t
         });
       }
     };
-    var he = {}, Ce = /* @__PURE__ */ Object.freeze({
+    var he = {}, Me = /* @__PURE__ */ Object.freeze({
       __proto__: null,
       htmlElementAttributes: {
         "*": [
@@ -1244,18 +1244,111 @@ var He = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : t
           "width"
         ]
       }
-    }), $e = /* @__PURE__ */ O(Ce);
+    }), Ce = /* @__PURE__ */ O(Me), ke = /* @__PURE__ */ Object.freeze({
+      __proto__: null,
+      htmlEventAttributes: [
+        "onabort",
+        "onafterprint",
+        "onauxclick",
+        "onbeforematch",
+        "onbeforeprint",
+        "onbeforeunload",
+        "onblur",
+        "oncancel",
+        "oncanplay",
+        "oncanplaythrough",
+        "onchange",
+        "onclick",
+        "onclose",
+        "oncontextlost",
+        "oncontextmenu",
+        "oncontextrestored",
+        "oncopy",
+        "oncuechange",
+        "oncut",
+        "ondblclick",
+        "ondrag",
+        "ondragend",
+        "ondragenter",
+        "ondragleave",
+        "ondragover",
+        "ondragstart",
+        "ondrop",
+        "ondurationchange",
+        "onemptied",
+        "onended",
+        "onerror",
+        "onfocus",
+        "onformdata",
+        "onhashchange",
+        "oninput",
+        "oninvalid",
+        "onkeydown",
+        "onkeypress",
+        "onkeyup",
+        "onlanguagechange",
+        "onload",
+        "onloadeddata",
+        "onloadedmetadata",
+        "onloadstart",
+        "onmessage",
+        "onmessageerror",
+        "onmousedown",
+        "onmouseenter",
+        "onmouseleave",
+        "onmousemove",
+        "onmouseout",
+        "onmouseover",
+        "onmouseup",
+        "onoffline",
+        "ononline",
+        "onpagehide",
+        "onpageshow",
+        "onpaste",
+        "onpause",
+        "onplay",
+        "onplaying",
+        "onpopstate",
+        "onprogress",
+        "onratechange",
+        "onrejectionhandled",
+        "onreset",
+        "onresize",
+        "onscroll",
+        "onscrollend",
+        "onsecuritypolicyviolation",
+        "onseeked",
+        "onseeking",
+        "onselect",
+        "onslotchange",
+        "onstalled",
+        "onstorage",
+        "onsubmit",
+        "onsuspend",
+        "ontimeupdate",
+        "ontoggle",
+        "onunhandledrejection",
+        "onunload",
+        "onvolumechange",
+        "onwaiting",
+        "onwheel"
+      ]
+    }), Ne = /* @__PURE__ */ O(ke);
     Object.defineProperty(he, "__esModule", { value: !0 });
-    const ye = $e;
+    const ye = Ce, Ee = Ne;
     he.default = {
       id: "attr-invalid",
       description: "Attributes must be valid for the given HTML tags.",
       init(a, s) {
-        const r = ye.htmlElementAttributes["*"] || [];
-        a.addListener("tagstart", (t) => {
-          const e = t.tagName.toLowerCase(), n = t.attrs, i = ye.htmlElementAttributes[e] || [], l = [...r, ...i];
-          for (const o of n)
-            l.includes(o.name) || s.error(`The attribute [ ${o.name} ] is not valid for the tag [ ${e} ].`, t.line, t.col + t.tagName.length + 1 + o.index, this, o.raw);
+        const r = ye.htmlElementAttributes["*"] || [], t = Ee.htmlEventAttributes || [];
+        a.addListener("tagstart", (e) => {
+          const n = e.tagName.toLowerCase(), i = e.attrs, l = ye.htmlElementAttributes[n] || [], o = [
+            ...r,
+            ...t,
+            ...l
+          ];
+          for (const c of i)
+            /^data-.+$/.test(c.name) || /^aria-.+$|^role$/.test(c.name) || /^adapt-.+$/.test(c.name) || o.includes(c.name) || s.error(`The attribute [ ${c.name} ] is not valid for the tag [ ${n} ].`, e.line, e.col + e.tagName.length + 1 + c.index, this, c.raw);
         });
       }
     };
@@ -1466,9 +1559,9 @@ var He = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : t
       Object.defineProperty(a, "idUnique", { enumerable: !0, get: function() {
         return b.default;
       } });
-      var P = G;
+      var $ = G;
       Object.defineProperty(a, "inlineScriptDisabled", { enumerable: !0, get: function() {
-        return P.default;
+        return $.default;
       } });
       var A = K;
       Object.defineProperty(a, "inlineStyleDisabled", { enumerable: !0, get: function() {
@@ -1494,55 +1587,55 @@ var He = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : t
       Object.defineProperty(a, "srcNotEmpty", { enumerable: !0, get: function() {
         return T.default;
       } });
-      var $ = ne;
+      var C = ne;
       Object.defineProperty(a, "styleDisabled", { enumerable: !0, get: function() {
-        return $.default;
+        return C.default;
       } });
       var pe = se;
       Object.defineProperty(a, "tagPair", { enumerable: !0, get: function() {
         return pe.default;
       } });
-      var ke = le;
+      var xe = le;
       Object.defineProperty(a, "tagSelfClose", { enumerable: !0, get: function() {
-        return ke.default;
-      } });
-      var qe = oe;
-      Object.defineProperty(a, "emptyTagNotSelfClosed", { enumerable: !0, get: function() {
-        return qe.default;
-      } });
-      var Ee = ce;
-      Object.defineProperty(a, "tagnameLowercase", { enumerable: !0, get: function() {
-        return Ee.default;
-      } });
-      var xe = de;
-      Object.defineProperty(a, "tagnameSpecialChars", { enumerable: !0, get: function() {
         return xe.default;
       } });
-      var Re = ue;
-      Object.defineProperty(a, "titleRequire", { enumerable: !0, get: function() {
+      var Re = oe;
+      Object.defineProperty(a, "emptyTagNotSelfClosed", { enumerable: !0, get: function() {
         return Re.default;
       } });
-      var De = fe;
-      Object.defineProperty(a, "tagsCheck", { enumerable: !0, get: function() {
+      var De = ce;
+      Object.defineProperty(a, "tagnameLowercase", { enumerable: !0, get: function() {
         return De.default;
       } });
-      var Se = ge;
-      Object.defineProperty(a, "attrNoUnnecessaryWhitespace", { enumerable: !0, get: function() {
+      var Se = de;
+      Object.defineProperty(a, "tagnameSpecialChars", { enumerable: !0, get: function() {
         return Se.default;
       } });
-      var ze = he;
-      Object.defineProperty(a, "attrInvalid", { enumerable: !0, get: function() {
+      var ze = ue;
+      Object.defineProperty(a, "titleRequire", { enumerable: !0, get: function() {
         return ze.default;
       } });
-      var Ie = me;
-      Object.defineProperty(a, "invalidTag", { enumerable: !0, get: function() {
+      var Ie = fe;
+      Object.defineProperty(a, "tagsCheck", { enumerable: !0, get: function() {
         return Ie.default;
+      } });
+      var He = ge;
+      Object.defineProperty(a, "attrNoUnnecessaryWhitespace", { enumerable: !0, get: function() {
+        return He.default;
+      } });
+      var Ue = he;
+      Object.defineProperty(a, "attrInvalid", { enumerable: !0, get: function() {
+        return Ue.default;
+      } });
+      var Ve = me;
+      Object.defineProperty(a, "invalidTag", { enumerable: !0, get: function() {
+        return Ve.default;
       } });
     }(be), function(a) {
       Object.defineProperty(a, "__esModule", { value: !0 }), a.HTMLParser = a.Reporter = a.HTMLRules = a.HTMLHint = void 0;
-      const s = C;
+      const s = M;
       a.HTMLParser = s.default;
-      const r = E;
+      const r = q;
       a.Reporter = r.default;
       const t = be;
       a.HTMLRules = t;
@@ -1583,9 +1676,9 @@ var He = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : t
           const u = o.indent || 0;
           return l.forEach((g) => {
             let p = g.evidence;
-            const v = g.line, b = g.col, P = p.length;
-            let A = b > 40 + 1 ? b - 40 : 1, w = p.length > b + 60 ? b + 60 : P;
-            b < 40 + 1 && (w += 40 - b + 1), p = p.replace(/\t/g, " ").substring(A - 1, w), A > 1 && (p = `...${p}`, A -= 3), w < P && (p += "..."), c.push(`${d.white + n(u)}L${v} |${d.grey}${p}${d.reset}`);
+            const v = g.line, b = g.col, $ = p.length;
+            let A = b > 40 + 1 ? b - 40 : 1, w = p.length > b + 60 ? b + 60 : $;
+            b < 40 + 1 && (w += 40 - b + 1), p = p.replace(/\t/g, " ").substring(A - 1, w), A > 1 && (p = `...${p}`, A -= 3), w < $ && (p += "..."), c.push(`${d.white + n(u)}L${v} |${d.grey}${p}${d.reset}`);
             let L = b - A;
             const h = p.substring(0, L).match(/[^\u0000-\u00ff]/g);
             h !== null && (L += h.length), c.push(`${d.white + n(u) + n(String(v).length + 3 + L)}^ ${d.red}${g.message} (${g.rule.id})${d.reset}`);
@@ -1598,18 +1691,18 @@ var He = typeof globalThis < "u" ? globalThis : typeof window < "u" ? window : t
       a.HTMLHint = new e(), Object.keys(t).forEach((i) => {
         a.HTMLHint.addRule(t[i]);
       });
-    }(q);
-    var Ne = /* @__PURE__ */ m(q);
-    return Ne;
+    }(E);
+    var qe = /* @__PURE__ */ m(E);
+    return qe;
   });
 })(_e);
-var Ue = _e.exports;
-const Ve = (M) => {
-  const y = M.split(" ");
+var We = _e.exports;
+const Fe = (P) => {
+  const y = P.split(" ");
   for (var m = 0; m < y.length; m++)
     y[m] = y[m].charAt(0).toUpperCase() + y[m].slice(1);
   return y.join(" ");
-}, Ze = {
+}, Be = {
   "tagname-lowercase": !0,
   "attr-lowercase": !0,
   "attr-invalid": !0,
@@ -1623,12 +1716,12 @@ const Ve = (M) => {
   "attr-no-duplication": !0,
   "title-require": !0
 };
-class We {
-  constructor(y, m = Ze, O) {
+class Ye {
+  constructor(y, m = Be, O) {
     this.html = y, this.ruleset = m, this.linterResponse = this.lint(), this.model = O;
   }
   lint() {
-    return Ue.HTMLHint.verify(this.html, this.ruleset);
+    return We.HTMLHint.verify(this.html, this.ruleset);
   }
   getEditorMarks(y) {
     return this.linterResponse.map((m) => ({
@@ -1637,14 +1730,14 @@ class We {
       endLineNumber: m.line,
       endColumn: m.evidence !== "" ? m.col + m.evidence.length : this.model !== void 0 ? this.model.getLineLength(m.line) : m.col + 1,
       message: m.message,
-      severity: y.MarkerSeverity[Ve(m.type)]
+      severity: y.MarkerSeverity[Fe(m.type)]
     }));
   }
   getLinterResponse() {
     return this.linterResponse;
   }
 }
-class at {
+class st {
   constructor(y, m, O) {
     this.editor = y, this.monaco = m, this.ruleset = O;
   }
@@ -1652,10 +1745,10 @@ class at {
     var O;
     const y = this.editor.getValue();
     if (((O = this.editor.getModel()) == null ? void 0 : O.getLanguageId()) === "html") {
-      const C = new We(y, this.ruleset, this.editor.getModel() || void 0).getEditorMarks(this.monaco), N = this.editor.getModel();
-      if (N === null)
+      const M = new Ye(y, this.ruleset, this.editor.getModel() || void 0).getEditorMarks(this.monaco), k = this.editor.getModel();
+      if (k === null)
         throw new Error("Your model still does't exist.");
-      this.monaco.editor.setModelMarkers(N, "owner", C);
+      this.monaco.editor.setModelMarkers(k, "owner", M);
     }
   }
   watch() {
@@ -1665,6 +1758,6 @@ class at {
   }
 }
 export {
-  We as HTMLMonacoMarks,
-  at as default
+  Ye as HTMLMonacoMarks,
+  st as default
 };
