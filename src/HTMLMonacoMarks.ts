@@ -11,6 +11,7 @@ const defaultRuleset: Ruleset = {
     'tagname-lowercase': true,
     'attr-lowercase': true,
     'attr-invalid': true,
+    'invalid-tag': true,
     'attr-value-double-quotes': true,
     'doctype-first': true,
     'tag-pair': true,
