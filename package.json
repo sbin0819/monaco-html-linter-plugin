@@ -1,6 +1,6 @@
 {
     "name": "monaco-html-linter-plugin",
-    "version": "0.1.0",
+    "version": "0.1.01",
     "description": "Simple HTML Linter for the Monaco Editor.",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
@@ -25,7 +25,7 @@
     "license": "MIT",
     "dependencies": {
         "@types/htmlhint": "^1.1.2",
-        "htmlhint-plus": "^0.0.6",
+        "htmlhint-plus": "^0.0.7",
         "monaco-editor": "^0.33.0"
     },
     "devDependencies": {
