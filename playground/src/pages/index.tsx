@@ -12,11 +12,11 @@ export default function App() {
             'spec-char-escape': false,
             'tag-pair': true,
             'attr-lowercase': true,
-            'invalid-tag': true,
             'attr-unsafe-chars': true,
             'attr-no-duplication': true,
             'attr-no-unnecessary-whitespace': true,
             'attr-invalid': true,
+            'invalid-tag': true,
             // 'empty-tag-not-self-closed': true,
         });
         linter.watch();
@@ -34,6 +34,11 @@ export default function App() {
                     defaultLanguage="html"
                     defaultValue="<divx>h</divx>"
                     onMount={handleEditorDidMount}
+                    options={{
+                        minimap: {
+                            enabled: false,
+                        },
+                    }}
                 />
             </div>
         </main>
