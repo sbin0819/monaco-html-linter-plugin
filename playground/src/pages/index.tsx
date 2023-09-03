@@ -10,7 +10,7 @@ export default function App() {
         const linter = new HTMLMonacoLinter(editor as any, monaco as any, {
             'doctype-first': false,
             'spec-char-escape': false,
-            'tag-pair': true,
+            'tag-pair': false,
             'attr-lowercase': true,
             'attr-unsafe-chars': true,
             'attr-no-duplication': true,
