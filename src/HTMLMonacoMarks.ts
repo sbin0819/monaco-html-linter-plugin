@@ -1,5 +1,5 @@
 import monaco, { editor } from 'monaco-editor';
-import { HTMLHint } from 'htmlhint-invalid-attribute-rule/dist/htmlhint';
+import { HTMLHint } from 'htmlhint-plus';
 import { Hint, Ruleset } from 'htmlhint/types';
 import { capitalize } from './utils';
 
