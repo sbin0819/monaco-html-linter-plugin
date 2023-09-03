@@ -5794,7 +5794,7 @@ de.default = {
       } else {
         const s = pe.htmlElementAttributes[o] || [];
         l = [
-          ...o === "meta" ? ["name", "content"] : [],
+          ...o === "meta" ? ["name", "property", "content"] : [],
           ...t,
           ...s,
           ...it.htmlEventAttributes || []
@@ -6007,7 +6007,24 @@ const nt = [
   "use",
   "view",
   "vkern"
-], ge = [.../* @__PURE__ */ new Set([...nt, ...at])];
+], ge = [.../* @__PURE__ */ new Set([...nt, ...at])], lt = /* @__PURE__ */ new Set([
+  "area",
+  "base",
+  "br",
+  "col",
+  "command",
+  "embed",
+  "hr",
+  "img",
+  "input",
+  "keygen",
+  "link",
+  "meta",
+  "param",
+  "source",
+  "track",
+  "wbr"
+]);
 fe.default = {
   id: "invalid-tag",
   description: "All tags must be valid HTML tags.",
@@ -6015,7 +6032,7 @@ fe.default = {
     const t = [];
     r.addListener("tagstart", (i) => {
       const e = i.tagName.toLowerCase();
-      ge.includes(e) ? t.push(e) : a.error(`The tag [ ${e} ] is not a valid HTML or SVG tag.`, i.line, i.col, this, i.raw);
+      ge.includes(e) ? lt.has(e) || t.push(e) : a.error(`The tag [ ${e} ] is not a valid HTML or SVG tag.`, i.line, i.col, this, i.raw);
     }), r.addListener("tagend", (i) => {
       const e = i.tagName.toLowerCase();
       if (!ge.includes(e))
@@ -6235,12 +6252,12 @@ fe.default = {
     r.HTMLHint.addRule(i[n]);
   });
 })(he);
-const lt = (r) => {
+const st = (r) => {
   const a = r.split(" ");
   for (var t = 0; t < a.length; t++)
     a[t] = a[t].charAt(0).toUpperCase() + a[t].slice(1);
   return a.join(" ");
-}, st = {
+}, ct = {
   "tagname-lowercase": !0,
   "attr-lowercase": !0,
   "attr-invalid": !0,
@@ -6254,8 +6271,8 @@ const lt = (r) => {
   "attr-no-duplication": !0,
   "title-require": !0
 };
-class ct {
-  constructor(a, t = st, i) {
+class dt {
+  constructor(a, t = ct, i) {
     this.html = a, this.ruleset = t, this.linterResponse = this.lint(), this.model = i;
   }
   lint() {
@@ -6268,14 +6285,14 @@ class ct {
       endLineNumber: t.line,
       endColumn: t.evidence !== "" ? t.col + t.evidence.length : this.model !== void 0 ? this.model.getLineLength(t.line) : t.col + 1,
       message: t.message,
-      severity: a.MarkerSeverity[lt(t.type)]
+      severity: a.MarkerSeverity[st(t.type)]
     }));
   }
   getLinterResponse() {
     return this.linterResponse;
   }
 }
-class dt {
+class ft {
   constructor(a, t, i) {
     this.editor = a, this.monaco = t, this.ruleset = i;
   }
@@ -6283,7 +6300,7 @@ class dt {
     var i;
     const a = this.editor.getValue();
     if (((i = this.editor.getModel()) == null ? void 0 : i.getLanguageId()) === "html") {
-      const o = new ct(a, this.ruleset, this.editor.getModel() || void 0).getEditorMarks(this.monaco), n = this.editor.getModel();
+      const o = new dt(a, this.ruleset, this.editor.getModel() || void 0).getEditorMarks(this.monaco), n = this.editor.getModel();
       if (n === null)
         throw new Error("Your model still does't exist.");
       this.monaco.editor.setModelMarkers(n, "owner", o);
@@ -6296,6 +6313,6 @@ class dt {
   }
 }
 export {
-  ct as HTMLMonacoMarks,
-  dt as default
+  dt as HTMLMonacoMarks,
+  ft as default
 };

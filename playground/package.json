@@ -17,12 +17,11 @@
         "eslint": "8.48.0",
         "eslint-config-next": "13.4.19",
         "html-element-attributes": "^3.2.0",
-        "monaco-html-linter-plugin": "^0.1.01",
+        "monaco-html-linter-plugin": "^0.1.1",
         "next": "13.4.19",
         "postcss": "8.4.29",
         "react": "18.2.0",
         "react-dom": "18.2.0",
-        "svg-event-attributes": "^2.0.2",
         "tailwindcss": "3.3.3",
         "typescript": "5.2.2"
     }
