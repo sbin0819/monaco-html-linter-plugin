@@ -6006,22 +6006,14 @@ const ot = [
   "use",
   "view",
   "vkern"
-], at = [.../* @__PURE__ */ new Set([...ot, ...nt])];
+], at = new Set([...ot, ...nt].map((r) => r.toLowerCase()));
 fe.default = {
   id: "invalid-tag",
-  description: "All tags must be valid HTML tags.",
+  description: "All tags must be valid HTML or SVG tags.",
   init(r, a) {
-    const t = [];
-    r.addListener("tagstart", (i) => {
-      const e = i.tagName.toLowerCase();
-      at.includes(e) ? t.push(e) : a.error(`The tag [ ${e} ] is not a valid HTML or SVG tag.`, i.line, i.col, this, i.raw);
-    }), r.addListener("tagend", (i) => {
-      const e = i.tagName.toLowerCase(), n = t.lastIndexOf(e);
-      n !== -1 && t.splice(n, 1);
-    }), r.addListener("end", () => {
-      t.forEach((i) => {
-        a.error(`The tag [ ${i} ] was opened but never closed.`, 0, 0, this, "");
-      });
+    r.addListener("tagstart", (t) => {
+      const i = t.tagName.toLowerCase();
+      at.has(i) || a.error(`The tag [ ${i} ] is not a valid HTML or SVG tag.`, t.line, t.col, this, t.raw);
     });
   }
 };
